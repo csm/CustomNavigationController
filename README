@@ -1,0 +1,11 @@
+This is a reimplementation of UINavigationController, with some extra features, and some missing features.
+
+The biggest added feature is it supports different animation directions, which can be helpful for doing different kinds of transitions. For example, I made an application where you switch between view controllers (kind of like a tab bar controller) and the transitions animate up and down.
+
+This code isn't really set up in a project as-is, just include it in your project. You will want to:
+
+  - Subclass CustomViewController if your content view controller previously subclassed UIViewController, or
+  - Subclass CustomTableViewController if your content view controller previously subclassed UITableViewController, and
+  - Use the property customNavigationController instead of navigationController.
+
+That's the extent of the documentation you'll get for now. Read the code :)
