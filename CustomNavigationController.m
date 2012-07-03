@@ -7,7 +7,6 @@
 //
 
 #import "CustomNavigationController.h"
-#import "NSMutableArray+stackOps.h"
 #import "CustomViewController+setNavigationController.h"
 
 @implementation CustomNavigationController
