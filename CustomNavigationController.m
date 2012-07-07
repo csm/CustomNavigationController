@@ -7,7 +7,6 @@
 //
 
 #import "CustomNavigationController.h"
-#import "NSMutableArray+stackOps.h"
 #import "CustomViewController+setNavigationController.h"
 
 @implementation CustomNavigationController
@@ -33,6 +32,11 @@
 {
 	if (self = [super init])
 	{
+		if ([viewController isKindOfClass: [CustomViewController class]])
+			[((CustomViewController *) viewController) setCustomNavigationController: self];
+		if ([viewController isKindOfClass: [CustomTableViewController class]])
+			[((CustomTableViewController *) viewController) setCustomNavigationController: self];
+		
 		viewControllers = [[NSMutableArray alloc] initWithObjects: viewController, nil];
 	}
 	return self;
